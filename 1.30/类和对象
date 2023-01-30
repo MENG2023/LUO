@@ -1,0 +1,18 @@
+package NowCoder;
+class Test {
+	public static void hello() {
+	    System.out.println("hello");
+	}
+}
+public class MyApplication {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Test test=null;
+		test.hello();
+	}
+}
+hello方法是一个静态方法，调用静态方法不需要创建实例对象。
+
+此时的 Test test=null; 表示test这个引用不指向任何对象。所以此处可以正常访问。
+
+但是我们需要牢记，静态方法的正确访问方式应该是用过类型来访问。即：Test.hello();
